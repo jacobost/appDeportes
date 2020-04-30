@@ -24,8 +24,22 @@ public class MainActivity extends AppCompatActivity {
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
+
+        final int[] ICONS = new int[]{
+                R.drawable.casa,
+                R.drawable.pin,
+                R.drawable.usuario,
+                R.drawable.avion
+        };
+
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+
+        tabs.getTabAt(0).setIcon(ICONS[0]);
+        tabs.getTabAt(1).setIcon(ICONS[1]);
+        tabs.getTabAt(2).setIcon(ICONS[2]);
+        tabs.getTabAt(3).setIcon(ICONS[3]);
+
         FloatingActionButton fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(new View.OnClickListener() {
