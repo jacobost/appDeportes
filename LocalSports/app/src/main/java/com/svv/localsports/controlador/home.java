@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.svv.localsports.R;
@@ -24,7 +25,6 @@ public class home extends Fragment {
     public home() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,10 +51,10 @@ public class home extends Fragment {
         int id = item.getItemId();
 
         if (id==R.id.action_deporte) {
-            Toast.makeText(getActivity(), "EEEEEEE", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Filtro de deporte no disponible", Toast.LENGTH_SHORT).show();
         }
         if (id==R.id.action_fecha) {
-            Toast.makeText(getActivity(), "OOOOOOOOO", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Filtro de fecha no disponible", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
