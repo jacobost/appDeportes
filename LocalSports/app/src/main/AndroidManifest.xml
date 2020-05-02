@@ -22,9 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="nosensor"
-            tools:ignore="LockedOrientationActivity" />
+        android:theme="@style/AppTheme"
+        android:screenOrientation="nosensor"
+        tools:ignore="LockedOrientationActivity" />
     </application>
 
 </manifest>
