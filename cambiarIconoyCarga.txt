@@ -1,0 +1,10 @@
+El icono se cambia con click derecho sobre res - new - image asset.
+Dejamos todo tal cual esta:
+Launcher Icons (adaptative and legacy)
+nombre: ic_launcher
+asset type: image
+Path: escogemos imagen
+resize al gusto.
+
+IMAGEN DE CARGA:
+Dentro de drawable se cambia ic_launcher.png
