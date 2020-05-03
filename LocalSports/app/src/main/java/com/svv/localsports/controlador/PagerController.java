@@ -1,9 +1,17 @@
 package com.svv.localsports.controlador;
 
+import android.content.res.Resources;
+
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.svv.localsports.MainActivity;
+import com.svv.localsports.R;
+
+import java.util.Set;
 
 public class PagerController extends FragmentPagerAdapter {
     int numoftabs;
