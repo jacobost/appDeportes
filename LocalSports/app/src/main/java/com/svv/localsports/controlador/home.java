@@ -12,7 +12,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.svv.localsports.R;
@@ -21,11 +20,9 @@ import com.svv.localsports.R;
  * A simple {@link Fragment} subclass.
  */
 public class home extends Fragment {
-
     public home() {
         // Required empty public constructor
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -56,7 +53,6 @@ public class home extends Fragment {
         if (id==R.id.action_fecha) {
             Toast.makeText(getActivity(), "Filtro de fecha no disponible", Toast.LENGTH_SHORT).show();
         }
-
         return super.onOptionsItemSelected(item);
     }
 }
