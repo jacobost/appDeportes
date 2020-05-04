@@ -12,9 +12,11 @@
         <androidx.appcompat.widget.Toolbar
             android:fitsSystemWindows="true"
             android:id="@+id/toolbar"
+            android:textSize="30sp"
+            app:titleTextColor="@color/colorAccent"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
             android:theme="@style/AppTheme"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
@@ -25,8 +27,7 @@
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabhome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content"/>
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabmap"
