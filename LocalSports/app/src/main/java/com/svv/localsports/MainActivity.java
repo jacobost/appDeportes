@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -23,6 +24,8 @@ import static android.widget.Toast.LENGTH_LONG;
 
 public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
+    AppBarLayout appBar;
+    Toolbar toolbar;
     ViewPager viewPager;
     TabItem tabHome, tabMap, tabUser, tabChat;
     FloatingActionButton fab;
@@ -37,12 +40,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Find the toolbar view inside the activity layout
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         // Sets the Toolbar to act as the ActionBar for this Activity window.
-        // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
+        appBar = findViewById(R.id.appBar);
         tabLayout = findViewById(R.id.tablayout);
         viewPager = findViewById(R.id.viewpager);
         tabHome = findViewById(R.id.tabhome);
@@ -74,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void barraIconos(int posicionSeleccionada){
+        //Se asegura de que la toolbar está presente cuando se cambia de tab.
+        appBar.setExpanded(true, true);
 
         posicionTab = posicionSeleccionada;
 

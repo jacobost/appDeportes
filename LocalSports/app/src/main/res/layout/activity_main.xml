@@ -8,9 +8,9 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:id="@+id/appBar">
 
-        <!--TODO:El toolbar falla al moverse entre tabs con el toolbar recogido.-->
         <androidx.appcompat.widget.Toolbar
             android:fitsSystemWindows="true"
             android:id="@+id/toolbar"
