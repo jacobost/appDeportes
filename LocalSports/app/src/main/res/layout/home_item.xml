@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_marginBottom="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+
+        <ImageView
+            android:id="@+id/imagenItem"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_casa" />
+
+        <TextView
+            android:id="@+id/organizadorItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/imagenItem"
+            android:text="Organizador:"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/canchaItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/organizadorEdit"
+            android:layout_alignStart="@+id/organizadorItem"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="Cancha:"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/horaItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canchaEdit"
+            android:layout_alignStart="@+id/canchaItem"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="Hora:"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/nivelItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horaEdit"
+            android:layout_alignStart="@+id/horaItem"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="Nivel:"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/asistentesItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nivelEdit"
+            android:layout_alignStart="@+id/nivelItem"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="Asistentes:"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/comentarioItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/asistentesEdit"
+            android:layout_alignStart="@+id/asistentesItem"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="Comentario:"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/organizadorEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/organizadorItem"
+            android:layout_alignTop="@+id/organizadorItem"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:text="hahahh"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/canchaEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/canchaItem"
+            android:layout_alignTop="@+id/canchaItem"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:text="erreerer"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/horaEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/horaItem"
+            android:layout_alignTop="@+id/horaItem"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:text="hahahh"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/nivelEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/nivelItem"
+            android:layout_alignTop="@+id/nivelItem"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:text="hahahh"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/asistentesEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/asistentesItem"
+            android:layout_alignTop="@+id/asistentesItem"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:text="hahahh"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/comentarioEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/comentarioItem"
+            android:layout_alignTop="@+id/comentarioItem"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:text="hahahh"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

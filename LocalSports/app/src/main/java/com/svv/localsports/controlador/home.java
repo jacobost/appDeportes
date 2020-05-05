@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,11 +17,19 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.svv.localsports.R;
+import com.svv.localsports.homeItem;
+import com.svv.localsports.homeRecyclerAdapter;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class home extends Fragment {
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+
     public home() {
         // Required empty public constructor
     }
@@ -34,6 +44,22 @@ public class home extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        ArrayList<homeItem> itemList = new ArrayList<>();
+        itemList.add(new homeItem(R.drawable.ic_launcher, "Pepe", "Aqui", "9:00", "Bajo", "3", "Venirse"));
+        itemList.add(new homeItem(R.drawable.ic_launcher, "Pepe", "Aqui", "9:00", "Bajo", "3", "Venirse"));
+        itemList.add(new homeItem(R.drawable.ic_launcher, "Pepe", "Aqui", "9:00", "Bajo", "3", "Venirse"));
+
+        mRecyclerView = getView().findViewById(R.id.recyclerview);
+        //mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mAdapter = new homeRecyclerAdapter(itemList);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     @Override

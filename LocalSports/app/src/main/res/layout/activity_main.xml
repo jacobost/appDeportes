@@ -9,6 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme">
+
+        <!--TODO:El toolbar falla al moverse entre tabs con el toolbar recogido.-->
         <androidx.appcompat.widget.Toolbar
             android:fitsSystemWindows="true"
             android:id="@+id/toolbar"
@@ -56,7 +58,7 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_usuario"
+        android:src="@drawable/ic_add_black_24dp"
         app:layout_anchor="@id/viewpager"
         app:layout_anchorGravity="bottom|right|end"
         android:layout_margin="16dp"
