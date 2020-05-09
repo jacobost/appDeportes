@@ -1,4 +1,4 @@
-package com.svv.localsports;
+package com.svv.localsports.controlador.home;
 
 public class homeItem {
     private int mImageResource;

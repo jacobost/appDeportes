@@ -1,4 +1,4 @@
-package com.svv.localsports.controlador;
+package com.svv.localsports.controlador.home;
 
 import android.os.Bundle;
 
@@ -17,8 +17,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.svv.localsports.R;
-import com.svv.localsports.homeItem;
-import com.svv.localsports.homeRecyclerAdapter;
 
 import java.util.ArrayList;
 
