@@ -18,7 +18,7 @@ public class homeRecyclerAdapter extends RecyclerView.Adapter<homeRecyclerAdapte
 
     public static class homeViewHolder extends RecyclerView.ViewHolder {
         public ImageView mImageView;
-        public TextView mTextViewOrganizador, mTextViewCancha, mTextViewHora, mTextViewNivel, mTextViewAsistentes, mTextViewComentario;
+        public TextView mTextViewOrganizador, mTextViewCancha, mTextViewHora, mTextViewFecha, mTextViewNivel, mTextViewAsistentes, mTextViewComentario;
 
         public homeViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -26,6 +26,7 @@ public class homeRecyclerAdapter extends RecyclerView.Adapter<homeRecyclerAdapte
             mTextViewOrganizador = itemView.findViewById(R.id.organizadorEdit);
             mTextViewCancha = itemView.findViewById(R.id.canchaEdit);
             mTextViewHora = itemView.findViewById(R.id.horaEdit);
+            mTextViewFecha = itemView.findViewById(R.id.fechaEdit);
             mTextViewNivel = itemView.findViewById(R.id.nivelEdit);
             mTextViewAsistentes = itemView.findViewById(R.id.asistentesEdit);
             mTextViewComentario = itemView.findViewById(R.id.comentarioEdit);
@@ -52,6 +53,7 @@ public class homeRecyclerAdapter extends RecyclerView.Adapter<homeRecyclerAdapte
         holder.mTextViewOrganizador.setText(currentItem.getTextOrganizador());
         holder.mTextViewCancha.setText(currentItem.getTextCancha());
         holder.mTextViewHora.setText(currentItem.getTextHora());
+        holder.mTextViewFecha.setText(currentItem.getTextFecha());
         holder.mTextViewNivel.setText(currentItem.getTextNivel());
         holder.mTextViewAsistentes.setText(currentItem.getTextAsistentes());
         holder.mTextViewComentario.setText(currentItem.getTextComentario());

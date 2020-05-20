@@ -60,6 +60,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add_black_24dp"
         app:layout_anchor="@id/viewpager"
+        app:tint="@color/colorSeleccionado"
+        app:backgroundTint="@color/colorPrimary"
         app:layout_anchorGravity="bottom|right|end"
         android:layout_margin="16dp"
         />

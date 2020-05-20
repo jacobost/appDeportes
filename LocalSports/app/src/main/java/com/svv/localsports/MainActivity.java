@@ -3,6 +3,7 @@ package com.svv.localsports;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
 
@@ -19,10 +20,11 @@ import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.svv.localsports.controlador.PagerController;
 import com.svv.localsports.controlador.home.AddEntry;
+import com.svv.localsports.controlador.home.home;
 
 import static android.widget.Toast.LENGTH_LONG;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AddEntry.nuevaEntradaListener {
     TabLayout tabLayout;
     AppBarLayout appBar;
     Toolbar toolbar;
@@ -131,5 +133,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return false;
+    }
+
+    @Override
+    public void insertarItemEnHome(int imageResource, String textOrganizador, String textCancha, String textHora, String textFecha, String textNivel, String textAsistentes, String textComentario) {
+        ((home) pagerAdapter.fragmentHome).insertItem(imageResource, textOrganizador, textCancha, textHora, textFecha, textNivel, textAsistentes, textComentario);
+        onBackPressed();
     }
 }

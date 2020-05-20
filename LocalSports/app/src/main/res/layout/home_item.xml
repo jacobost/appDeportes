@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="4dp"
-    android:layout_marginBottom="4dp">
+    android:layout_margin="4dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,11 +53,23 @@
             android:textSize="15sp"
             android:textStyle="bold" />
         <TextView
-            android:id="@+id/nivelItem"
+            android:id="@+id/fechaItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/horaEdit"
             android:layout_alignStart="@+id/horaItem"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="Fecha:"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/nivelItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fechaEdit"
+            android:layout_alignStart="@+id/fechaItem"
             android:layout_marginStart="0dp"
             android:layout_marginTop="10dp"
             android:text="Nivel:"
@@ -120,6 +132,18 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/horaItem"
             android:layout_alignTop="@+id/horaItem"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:text="hahahh"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fechaEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/fechaItem"
+            android:layout_alignTop="@+id/fechaItem"
             android:layout_marginStart="8dp"
             android:layout_marginTop="0dp"
             android:text="hahahh"

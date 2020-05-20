@@ -10,6 +10,7 @@ import com.svv.localsports.controlador.home.home;
 
 public class PagerController extends FragmentPagerAdapter {
     int numoftabs;
+    public Fragment fragmentHome;
 
     public PagerController(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
@@ -21,7 +22,8 @@ public class PagerController extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new home();
+                fragmentHome = new home();
+                return fragmentHome;
             case 1:
                 return new map();
             case 2:

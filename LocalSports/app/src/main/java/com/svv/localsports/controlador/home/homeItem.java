@@ -5,15 +5,17 @@ public class homeItem {
     private String mTextOrganizador;
     private String mTextCancha;
     private String mTextHora;
+    private String mTextFecha;
     private String mTextNivel;
     private String mTextAsistentes;
     private String mTextComentario;
 
-    public homeItem (int imageResource, String textOrganizador, String textCancha, String textHora, String textNivel, String textAsistentes, String textComentario) {
+    public homeItem (int imageResource, String textOrganizador, String textCancha, String textHora, String textFecha, String textNivel, String textAsistentes, String textComentario) {
         mImageResource = imageResource;
         mTextOrganizador = textOrganizador;
         mTextCancha = textCancha;
         mTextHora = textHora;
+        mTextFecha = textFecha;
         mTextNivel = textNivel;
         mTextAsistentes = textAsistentes;
         mTextComentario = textComentario;
@@ -33,6 +35,10 @@ public class homeItem {
 
     public String getTextHora () {
         return mTextHora;
+    }
+
+    public String getTextFecha () {
+        return mTextFecha;
     }
 
     public String getTextNivel () {

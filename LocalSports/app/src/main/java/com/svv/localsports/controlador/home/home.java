@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -27,10 +28,17 @@ public class home extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private ArrayList<homeItem> mItemList;
+
+    public void insertItem (int imageResource, String textOrganizador, String textCancha, String textHora, String textFecha, String textNivel, String textAsistentes, String textComentario) {
+        mItemList.add(mItemList.size(), new homeItem(imageResource, textOrganizador, textCancha, textHora, textFecha, textNivel, textAsistentes, textComentario));
+        mAdapter.notifyItemInserted(mItemList.size());
+    }
 
     public home() {
         // Required empty public constructor
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -42,19 +50,19 @@ public class home extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         super.onCreate(savedInstanceState);
+        mItemList = new ArrayList<>();
+
+        mItemList.add(new homeItem(R.drawable.ic_launcher, "Pepe", "Aqui", "9:00", "2/3/20", "Bajo", "3", "Venirse"));
+        mItemList.add(new homeItem(R.drawable.ic_launcher, "Pepe", "Aqui", "9:00", "2/3/20", "Bajo", "3", "Venirse"));
+        mItemList.add(new homeItem(R.drawable.ic_launcher, "Pepe", "Aqui", "9:00", "2/3/20", "Bajo", "3", "Venirse"));
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        ArrayList<homeItem> itemList = new ArrayList<>();
-        itemList.add(new homeItem(R.drawable.ic_launcher, "Pepe", "Aqui", "9:00", "Bajo", "3", "Venirse"));
-        itemList.add(new homeItem(R.drawable.ic_launcher, "Pepe", "Aqui", "9:00", "Bajo", "3", "Venirse"));
-        itemList.add(new homeItem(R.drawable.ic_launcher, "Pepe", "Aqui", "9:00", "Bajo", "3", "Venirse"));
-
         mRecyclerView = getView().findViewById(R.id.recyclerview);
         //mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
-        mAdapter = new homeRecyclerAdapter(itemList);
+        mAdapter = new homeRecyclerAdapter(mItemList);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
